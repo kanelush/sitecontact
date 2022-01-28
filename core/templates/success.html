@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Transacción Realizada Exitosamente{% endblock %}
+
+{% block content%} 
+<div class="tile">   
+    <div class="box has-text-centered">
+        <p class="content titulo"><strong>Estado: {{ response.status}}</strong> Compra exitosa, le enviaremos su producto/servicio a la brevedad</p>
+        {% if token_tbk %}
+            <p><strong>TOKEN_ANULADO: </strong><strong>{{ token_tbk }}</strong></p>
+        {% endif %}  
+        
+
+</div>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% block title %}Inicio | Bienvenidos{%endblock %}
+{% block content %}
+<!-- <h1 class="title hello has-text-centered">Digital Art Gallery!</h1> -->
+<h1 class="title is-4 has-text-centered c1">Contáctanos</h1>
+<div class="columns is-centered">
+  <div class="column padre is-one-third">
+    <form method="POST" class="">
+      {% csrf_token %}
+      <div class="field">
+        <label class="label">Nombre</label>
+        <div class="control">
+          {% render_field form.name class="input"%}
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Mail</label>
+        <div class="control">
+          {% render_field form.mail class="input"%}
+        </div>
+      </div>
+      
+      
+      <div class="field">
+        <label class="label">Fecha</label>
+        <div class="control">
+          {% render_field form.start_date class="input" type="date" %}
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Hora a Reservar</label>
+        <div class="control">
+          {% render_field form.fieldo class="input"%}
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Asunto</label>
+        <div class="control">
+          {% render_field form.subject class="input" %}
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Descripción</label>
+        <div class="control">
+          {% render_field form.description rows="4" class="textarea" %}
+        </div>
+      </div>
+      <div class="field is-grouped">
+        <div class="control">
+          <button onclick="sweet()" class="button is-info">Enviar</button>
+        </div>
+        <div class="control">
+          <button class="button is-link is-light">Cancelar</button>
+        </div>
+      </div>
+      
+       
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
+

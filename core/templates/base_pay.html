@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}Múltiples opciones{% endblock %}
+{% block content %}
+<div class="container hero">
+    <div class="title">Productos y Servicios</div>
+
+    <div class="tile is-ancestor">
+        {% for a in result %}
+               <div class="tile is-parent is-3">
+                
+                <div class="tile is-child has-text-centered card">
+                    <form method="POST" action="{{ a.url }}">
+                        {% csrf_token %}
+                                     
+                        {% if forloop.counter0 == 0 %}
+                        <h1 class="title">{{ name.0 }}</h1>
+                        <h2 class="title titulo">${{ price.0 |intcomma }} clp</h2>  
+                        
+                        {% elif forloop.counter0 == 1 %}
+                        <h1 class="title">{{ name.1 }}</h1>
+                        <h2 class="title titulo">${{ price.1 |intcomma }} clp</h2>  
+                        
+                        {% elif forloop.counter0 == 2 %}
+                        <h1 class="title">{{ name.2 }}</h1>
+                        <h2 class="title titulo">${{ price.2 |intcomma }} clp</h2>  
+                        
+                        {% elif forloop.counter0 == 3 %}
+                        <h1 class="title">{{ name.3 }}</h1>
+                        <h2 class="title titulo">${{ price.3 |intcomma}} clp</h2>
+                        {% elif forloop.counter0 == 4 %}
+                        <h1 class="title">{{ name.4 }}</h1>
+                        <h2 class="title titulo">${{ price.4 |intcomma }} clp</h2>  
+                        {% elif forloop.counter0 == 5 %}
+                        <h1 class="title">{{ name.5 }}</h1>
+                        <h2 class="title titulo">${{ price.5 |intcomma}} clp</h2>  
+                        {% endif %}
+                        <input type="hidden" name="token_ws" value= "{{ a.token }}" />
+                        <div class="box">
+                            <input class="button is-success" type="submit" value="Ir a pagar">  
+                        </div>     
+                        </form> 
+                </div>  
+               </div>
+    {% endfor %} 
+    </div>
+</div>
+{% endblock %}

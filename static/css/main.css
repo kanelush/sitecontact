@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+@media only screen and (min-width:900px) {
+    .padre {
+        border-radius: 2.1%;
+        border-style: dotted;
+        padding: 4rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        transition: transform 0.2s ease;
+        
+        
+    }
+    
+    .padre:hover {
+        background: whitesmoke;
+        transform: scale(1.05);
+          
+    }
+    
+    .c1 {
+        padding: 20px;
+    }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .padre {
+      padding: 10%;
+      
+      
+  }
+
+ }
+
+ @media only screen and (min-device-width: 390px) and (max-device-height: 844px) and (-webkit-device-pixel-ratio: 3) { 
+     * {
+         background: whitesmoke;
+     }
+    .padre {
+        padding: 10%;
+          
+    }
+    .c1 {
+        padding-top: 10%;
+        padding-bottom: 0%;
+    }
+    
+ }
+ 
+ .container {
+    margin-top: 100px;
+    align-items: center;
+}
+.card {
+    border: lightgreen;
+    border-style: solid;
+}
+.is-ancestor {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.is-parent {
+
+    margin: 3%;
+}
+.is-child {
+    transition: transform .15s;
+}
+.is-child:hover {
+    transform: scale(1.02); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    background: #1bf55c91; 
+    
+    
+}
+.is-child:hover .title {
+    color: gold;
+}
+.title{
+    color:lightgreen;
+    
+}
+
+@media only screen and (max-width: 900px) {
+.tile {
+        min-height:100%;
+        min-width:100%;
+        margin-left:10px;
+        margin-right: 27px;
+     }
+
+
+}
