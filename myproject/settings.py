@@ -90,8 +90,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'db_v1',
-        'USER': 'user1',
-        'PASSWORD': 'user1',
+        'USER': 'x',
+        'PASSWORD': 'x',
         'HOST': 'db',
         'PORT': '5432',
     }
@@ -131,8 +131,8 @@ USE_TZ = True
 #mail
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'webclspa1@gmail.com'
-EMAIL_HOST_PASSWORD = '' #past the key or password app here
+EMAIL_HOST_USER = 'x'
+EMAIL_HOST_PASSWORD = 'x' #past the key or password app here
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
